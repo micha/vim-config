@@ -7,6 +7,5 @@ all:
 
 install:
 	git pull origin master
-	rm -rf ~/.vim ~/.vimrc
-	cp -pR .vim ~
-	cp -pR .vimrc ~
+	rm -rf ~/.vim ~/.vimrc ~/.screenrc
+	cp -pR .vim .vimrc .screenrc ~
