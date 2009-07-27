@@ -1,0 +1,12 @@
+[user]
+	email = asdf@ubergibson.com
+	name  = Micha Niskin
+
+[alias]
+  ci    = commit
+  co    = checkout
+  st    = status
+  br    = branch
+  re    = remote
+  di    = diff --color
+  sta   = stash
