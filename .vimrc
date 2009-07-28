@@ -9,6 +9,7 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 
 au BufNewFile,BufRead *.json setf javascript
+au BufNewFile,BufRead .bash_aliases setf sh
 
 :set autoindent
 :set shiftwidth=2
