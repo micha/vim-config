@@ -1,12 +1,17 @@
 [user]
 	email = asdf@ubergibson.com
-	name  = Micha Niskin
+	name = Micha Niskin
 
 [alias]
-  ci    = commit
-  co    = checkout
-  st    = status
-  br    = branch
-  re    = remote
-  di    = diff --color
-  sta   = stash
+  ci = commit
+  co = checkout
+  st = status
+  br = branch
+  re = remote
+  di = diff --color
+
+[branch]
+	autosetupmerge = true
+
+[push]
+  default = tracking
