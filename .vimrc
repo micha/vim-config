@@ -10,6 +10,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 
 au BufNewFile,BufRead *.json setf javascript
 au BufNewFile,BufRead .bash_aliases setf sh
+au BufNewFile,BufRead Makefile setf make|set noet
 
 :set autoindent
 :set shiftwidth=2
