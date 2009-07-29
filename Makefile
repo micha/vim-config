@@ -1,4 +1,4 @@
-FILES = .vim .vimrc .screenrc .bash_aliases .gitconfig
+FILES = .vim .vimrc .screenrc .bash_aliases .gitconfig .git-completion
 APPS  = bin
 
 none:
