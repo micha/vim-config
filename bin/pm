@@ -1,0 +1,18 @@
+#!/usr/bin/perl -s
+
+use Text::Glob qw(match_glob glob_to_regex);
+
+my @path = grep { !$seen{$_}++ } split(':', $ENV{'PATH'});
+
+foreach (@ARGV) {
+  if ($back) {
+    push(@path, $_);
+  } elsif ($remove) {
+    my $regex = glob_to_regex($_);
+    @path = grep(!/^$regex$/, @path);
+  } else {
+    unshift(@path, $_);
+  }
+}
+
+print join(':', @path)."\n";
