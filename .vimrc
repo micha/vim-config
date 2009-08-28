@@ -11,8 +11,8 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 au BufNewFile,BufRead *.json setf javascript
 au BufNewFile,BufRead .bash_aliases setf sh
 au BufNewFile,BufRead Makefile setf make|set noet
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+"au BufWinLeave * mkview
+"au BufWinEnter * silent loadview
 
 set autoindent
 set shiftwidth=2
