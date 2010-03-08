@@ -6,12 +6,43 @@
   ci = commit
   co = checkout
   st = status
-  br = branch
+  br = branch --color
   re = remote
   di = diff --color
+  wc = whatchanged
 
 [branch]
 	autosetupmerge = true
 
 [push]
   default = current
+
+[github]
+	user = micha
+	token = 26be60eea43cad452634bb132c6d2f62
+
+[diff]
+  color = auto
+  rename = copy
+
+[pager]
+  color = true
+
+[status]
+  color = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
