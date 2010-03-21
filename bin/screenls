@@ -2,11 +2,10 @@
 
 screen -ls |awk '$4 ~ /^\([DA][et]tached\)$/ {print $1}' |tr '[.]' '[ ]' \
   | while read pid screen; do
-      echo $screen
       ps h -o tty --ppid $pid | while read pty; do
         ps h --tty /dev/$pty \
           |sed -e 's/^[ \t]*//' -e 's/  */ /g' \
           |cut -d' ' -f5- \
-          |sed 's/^/  > /'
+          |sed "s/^/$screen: /"
       done
     done
