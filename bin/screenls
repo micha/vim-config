@@ -2,8 +2,8 @@
 
 screen -ls |awk '/\([DA][et]tached\)/ {print $1}' |tr '[.]' '[ ]' \
   | while read pid screen; do
-      echo
-      ps -a -o ppid=,tty= |awk "\$1 == $pid {print \$2}" | while read pty; do
+      echo "pid='$pid', screen='$screen'"
+      ps -e -o ppid,tty |sed 1d |awk "\$1 == $pid {print \$2}" | while read pty; do
         ps -o command= -t /dev/$pty \
           |sed "s/^/$screen: /"
       done
