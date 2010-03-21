@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
-screen -ls |awk '$4 ~ /^\([DA][et]tached\)$/ {print $1}' |tr '[.]' '[ ]' \
+screen -ls |awk '/\([DA][et]tached\)/ {print $1}' |tr '[.]' '[ ]' \
   | while read pid screen; do
-      ps h -o tty --ppid $pid | while read pty; do
-        ps h --tty /dev/$pty \
-          |sed -e 's/^[ \t]*//' -e 's/  */ /g' \
-          |cut -d' ' -f5- \
+      echo
+      ps -a -o ppid=,tty= |awk "\$1 == $pid {print \$2}" | while read pty; do
+        ps -o command= -t /dev/$pty \
           |sed "s/^/$screen: /"
       done
     done
