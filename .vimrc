@@ -44,6 +44,9 @@ set foldmethod=indent
 set foldlevelstart=99
 set hidden
 
+nmap <C-c> :w !coffee -npe
+vmap <C-c> :w !coffee -npe
+
 nmap aa :b#
 nmap ah :bp
 nmap al :bn

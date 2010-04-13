@@ -1,7 +1,10 @@
 FILES = .vim .vimrc .screenrc .bash_aliases .gitconfig .git-completion
 APPS  = bin
 
-none:
+usage:
+	@echo "usage: make {usage|list|diff|save|install}"
+
+list:
 	@for i in $(FILES); do echo $$i; done
 	@for i in $(APPS); do \
 		for j in $$i/*; do \
