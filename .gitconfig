@@ -1,6 +1,6 @@
 [user]
-	email = asdf@ubergibson.com
-	name = Micha Niskin
+  mail = asdf@ubergibson.com
+  name = Micha Niskin
 
 [alias]
   ci = commit
@@ -12,11 +12,11 @@
   wc = whatchanged
 
 [branch]
-	autosetupmerge = true
+  autosetupmerge = true
 
 [branch "master"]
-	remote = origin
-	merge = refs/heads/master
+  remote = origin
+  merge = refs/heads/master
 
 [pull]
   default = current
@@ -25,8 +25,8 @@
   default = current
 
 [github]
-	user = micha
-	token = 26be60eea43cad452634bb132c6d2f62
+  user = micha
+  token = 26be60eea43cad452634bb132c6d2f62
 
 [diff]
   color = auto
