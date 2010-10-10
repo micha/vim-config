@@ -1037,7 +1037,7 @@ function s:GPGNameToID(name)
   " when called with "--with-colons" gpg encodes its output _ALWAYS_ as UTF-8,
   " so convert it, if necessary
   if (&encoding != "utf-8")
-    let output = iconv(output, "utf-8", &encoding)
+    "let output = iconv(output, "utf-8", &encoding)
   endif
   let lines = split(output, "\n")
 
