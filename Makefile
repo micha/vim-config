@@ -1,5 +1,5 @@
 FILES = .vim .vimrc .screenrc .bash_aliases .gitconfig .git-completion
-APPS  = bin
+APPS  = bin jar
 
 usage:
 	@echo "usage: make {usage|list|diff|save|install}"
