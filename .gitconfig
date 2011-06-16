@@ -1,6 +1,7 @@
 [user]
   email = asdf@ubergibson.com
   name = Micha Niskin
+	convore = octagon
 
 [alias]
   ci = commit

@@ -7,15 +7,15 @@ am="$GIT_AUTHOR_EMAIL"
 cn="$GIT_COMMITTER_NAME"
 cm="$GIT_COMMITTER_EMAIL"
  
-if [ "$GIT_COMMITTER_EMAIL" = "micha@9708d6e4-2587-447f-a9e4-23e61c6ca176" ]
+if [ "$GIT_COMMITTER_EMAIL" = "micha@thinkminimo.(none)" ]
 then
 cn="Micha Niskin"
 cm="asdf@ubergibson.com"
 fi
-if [ "$GIT_AUTHOR_EMAIL" = "micha@9708d6e4-2587-447f-a9e4-23e61c6ca176" ]
+if [ "$GIT_AUTHOR_EMAIL" = "micha@thinkminimo.(none)" ]
 then
 an="Micha Niskin"
-am="asdf@ubergibson.com."
+am="asdf@ubergibson.com"
 fi
  
 export GIT_AUTHOR_NAME=$an

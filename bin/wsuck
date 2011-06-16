@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+#
+# Usage: mkdir mydir; cd mydir; wsuck <url>
+#
+
+url="$1"
+cut=$(echo "$url"  |awk -F / '{print NF-4}')
+
+wget -r -np -p -nH --cut-dirs=$cut "$url" 

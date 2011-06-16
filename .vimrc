@@ -8,6 +8,8 @@ if has("autocmd")
   autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
   autocmd FileType php set omnifunc=phpcomplete#CompletePHP
   autocmd FileType c set omnifunc=ccomplete#Complete
+  autocmd FileType pgp set ts=8
+  autocmd filetype lisp,scheme,art setlocal equalprg=scmindent.scm
 
   autocmd BufNewFile,BufRead *.json setf javascript
   autocmd BufNewFile,BufRead .bash_aliases setf sh
@@ -29,6 +31,9 @@ else
   syntax on
 endif
 
+let vimclojure#HighlightBuiltins = 1
+"let vimclojure#WantNailgun = 1
+
 set autoindent
 set shiftwidth=2
 set tabstop=2
@@ -44,8 +49,7 @@ set foldmethod=indent
 set foldlevelstart=99
 set hidden
 
-nmap <C-c> :w !coffee -npe
-vmap <C-c> :w !coffee -npe
+nmap = mz:%!scmindent.scm'z
 
 nmap aa :b#
 nmap ah :bp
