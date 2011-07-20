@@ -4,6 +4,7 @@ alias vi=vim
 alias j=jobs
 alias z=suspend
 
+set -o vi
 
 [ -e $HOME/bin/resty ] && . $HOME/bin/resty
 [ -e $HOME/.git-completion ] && . $HOME/.git-completion
