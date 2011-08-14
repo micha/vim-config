@@ -1,4 +1,4 @@
-FILES = .vim .vimrc .screenrc .bash_aliases .gitconfig .git-completion
+FILES = .vim .vimrc .screenrc .bash_aliases .git-completion
 APPS  = bin jar
 
 usage:
